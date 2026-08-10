@@ -10,11 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AccessibilityRouteImport } from './routes/accessibility'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccessibilityRoute = AccessibilityRouteImport.update({
+  id: '/accessibility',
+  path: '/accessibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
@@ -25,27 +37,35 @@ const ApiContactRoute = ApiContactRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/privacy': typeof PrivacyRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/privacy': typeof PrivacyRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/privacy': typeof PrivacyRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/contact'
+  fullPaths: '/' | '/accessibility' | '/privacy' | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/contact'
-  id: '__root__' | '/' | '/api/contact'
+  to: '/' | '/accessibility' | '/privacy' | '/api/contact'
+  id: '__root__' | '/' | '/accessibility' | '/privacy' | '/api/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccessibilityRoute: typeof AccessibilityRoute
+  PrivacyRoute: typeof PrivacyRoute
   ApiContactRoute: typeof ApiContactRoute
 }
 
@@ -56,6 +76,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accessibility': {
+      id: '/accessibility'
+      path: '/accessibility'
+      fullPath: '/accessibility'
+      preLoaderRoute: typeof AccessibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/contact': {
@@ -70,6 +104,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccessibilityRoute: AccessibilityRoute,
+  PrivacyRoute: PrivacyRoute,
   ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
