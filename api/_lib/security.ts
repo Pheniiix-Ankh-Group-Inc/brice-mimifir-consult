@@ -4,9 +4,9 @@ import { buildHtml, buildSubject, buildText } from "./email-template";
 export type HandlerResult = { status: number; body: Record<string, unknown> };
 
 export type Env = {
-  RESEND_API_KEY?: string;
-  CONTACT_TO_EMAIL?: string;
-  CONTACT_FROM_EMAIL?: string;
+  RESEND_API_KEY: string | undefined;
+  CONTACT_TO_EMAIL: string | undefined;
+  CONTACT_FROM_EMAIL: string | undefined;
 };
 
 /**
