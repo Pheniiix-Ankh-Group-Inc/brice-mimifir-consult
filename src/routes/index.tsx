@@ -63,7 +63,6 @@ export const Route = createFileRoute("/")({
               "@type": "ProfessionalService",
               name: "Brice Mimifir",
               provider: { "@id": "#organization" },
-              
               areaServed: "Canada",
             },
           ],
