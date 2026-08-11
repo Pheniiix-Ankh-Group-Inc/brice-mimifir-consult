@@ -78,14 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Brice Mimifir Inc. — Business & Technology Transformation" },
+      { title: "Brice Mimifir — Business & Technology Transformation" },
       {
         name: "description",
         content:
           "Independent advisory helping organizations diagnose technology friction, decide what matters first, and transform with their teams.",
       },
       { name: "author", content: "Brice Mimifir" },
-      { property: "og:site_name", content: "Brice Mimifir Inc." },
+      { property: "og:site_name", content: "Brice Mimifir" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

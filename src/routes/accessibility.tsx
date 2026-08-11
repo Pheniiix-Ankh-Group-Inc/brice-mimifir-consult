@@ -6,12 +6,12 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 export const Route = createFileRoute("/accessibility")({
   head: () => ({
     meta: [
-      { title: "Accessibility | Brice Mimifir Inc." },
+      { title: "Accessibility | Brice Mimifir" },
       {
         name: "description",
         content: "The accessibility approach and target applied to this website.",
       },
-      { property: "og:title", content: "Accessibility | Brice Mimifir Inc." },
+      { property: "og:title", content: "Accessibility | Brice Mimifir" },
       {
         property: "og:description",
         content: "The accessibility approach and target applied to this website.",
