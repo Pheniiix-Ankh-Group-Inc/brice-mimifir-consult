@@ -34,20 +34,39 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: "Brice Mimifir Inc.",
-          email: "brice.mimifir.a@gmail.com",
-          areaServed: "Canada",
-          address: { "@type": "PostalAddress", addressLocality: "Montréal", addressCountry: "CA" },
-          sameAs: [
-            "https://www.linkedin.com/in/brice-mimifir",
-            "https://www.instagram.com/bricemimifir/",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "#brice-mimifir",
+              name: "Brice Mimifir",
+              jobTitle: "Business & Technology Transformation Advisor",
+              email: "brice.mimifir.a@gmail.com",
+              sameAs: [
+                "https://www.linkedin.com/in/brice-mimifir",
+                "https://www.instagram.com/bricemimifir/",
+              ],
+              worksFor: { "@id": "#organization" },
+            },
+            {
+              "@type": "Organization",
+              "@id": "#organization",
+              name: "Groupe Pheniiix Ankh Inc.",
+              alternateName: "Group Pheniiix Ankh Inc.",
+              email: "brice.mimifir.a@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Montréal",
+                addressCountry: "CA",
+              },
+            },
+            {
+              "@type": "ProfessionalService",
+              name: "Brice Mimifir",
+              provider: { "@id": "#organization" },
+              founder: { "@id": "#brice-mimifir" },
+              areaServed: "Canada",
+            },
           ],
-          founder: {
-            "@type": "Person",
-            name: "Brice Mimifir",
-            jobTitle: "Business & Technology Transformation Advisor",
-          },
         }),
       },
     ],
