@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 
+import { InstagramIcon, LinkedInIcon } from "@/components/icons/SocialIcons";
 import { SITE } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { scrollToSection } from "@/lib/scroll";
