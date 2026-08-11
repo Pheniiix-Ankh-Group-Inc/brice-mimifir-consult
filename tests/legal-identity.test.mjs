@@ -25,6 +25,7 @@ test("uses the correct bilingual legal entities and removes the former entity", 
   assert.match(root, /og:site_name.*Brice Mimifir/);
   assert.match(index, /Groupe Pheniiix Ankh Inc\./);
   assert.match(index, /Group Pheniiix Ankh Inc\./);
+  assert.equal(/\bfounder\b/.test(index), false);
 });
 
 test("uses the approved consent and footer copy", async () => {

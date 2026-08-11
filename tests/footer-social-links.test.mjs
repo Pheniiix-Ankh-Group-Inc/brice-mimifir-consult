@@ -11,8 +11,13 @@ test("footer uses accessible icon-only social links", async () => {
   assert.match(footer, /InstagramIcon/);
   assert.match(footer, /aria-label=\{t\.common\.linkedin\}/);
   assert.match(footer, /aria-label=\{t\.common\.instagram\}/);
-  assert.match(footer, /h-11 w-11/);
-  assert.match(footer, /hover:text-brass/);
+  const anchors = footer.match(/className="[^"]*h-11 w-11[^"]*"/g) ?? [];
+  assert.equal(anchors.length, 2);
+  for (const cls of anchors) {
+    assert.match(cls, /\btext-ivory(?!\/)/);
+    assert.match(cls, /\bhover:text-brass\b/);
+    assert.match(cls, /\bfocus-visible:text-brass\b/);
+  }
   assert.match(hero, /\{t\.common\.linkedin\}/);
   assert.match(hero, /\{t\.common\.instagram\}/);
   assert.match(menu, /\{t\.common\.linkedin\}/);
