@@ -286,7 +286,8 @@ export const fr: Content = {
     connectLabel: "Contact",
     privacy: "Confidentialité",
     accessibility: "Accessibilité",
-    copyright: (year: number) => `© ${year} Groupe Pheniiix Ankh Inc. — Site professionnel de Brice Mimifir.`,
+    copyright: (year: number) =>
+      `© ${year} Groupe Pheniiix Ankh Inc. — Site professionnel de Brice Mimifir.`,
   },
   privacy: {
     title: "Confidentialité",

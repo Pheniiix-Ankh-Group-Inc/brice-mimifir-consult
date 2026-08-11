@@ -48,7 +48,10 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-[15px] text-ivory/80">
             <li>{t.common.location}</li>
             <li>
-              <a className="border-b border-brass/50 hover:text-brass" href={`mailto:${SITE.email}`}>
+              <a
+                className="border-b border-brass/50 hover:text-brass"
+                href={`mailto:${SITE.email}`}
+              >
                 {SITE.email}
               </a>
             </li>
