@@ -59,7 +59,7 @@ export function Footer() {
           <ul className="mt-4 flex items-center gap-2">
             <li>
               <a
-                className="flex h-11 w-11 items-center justify-center text-ivory/80 transition-colors duration-200 hover:text-brass"
+                className="flex h-11 w-11 items-center justify-center text-ivory transition-colors duration-200 hover:text-brass focus-visible:text-brass"
                 href={SITE.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                className="flex h-11 w-11 items-center justify-center text-ivory/80 transition-colors duration-200 hover:text-brass"
+                className="flex h-11 w-11 items-center justify-center text-ivory transition-colors duration-200 hover:text-brass focus-visible:text-brass"
                 href={SITE.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
