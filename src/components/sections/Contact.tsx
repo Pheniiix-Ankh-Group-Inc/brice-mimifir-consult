@@ -5,7 +5,9 @@ import { SITE } from "@/content/site";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
 type Status = "idle" | "sending" | "success" | "error";
-type FieldErrors = Partial<Record<"name" | "email" | "organization" | "message" | "consent", string>>;
+type FieldErrors = Partial<
+  Record<"name" | "email" | "organization" | "message" | "consent", string>
+>;
 
 const endpoint = (import.meta.env["VITE_CONTACT_API_URL"] as string | undefined) || "/api/contact";
 
@@ -35,7 +37,8 @@ export function Contact() {
     const name = values.name.trim();
     if (name.length < 2 || name.length > 80) next.name = c.errors.name;
     const email = values.email.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) next.email = c.errors.email;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254)
+      next.email = c.errors.email;
     if (values.organization.trim().length > 120) next.organization = c.errors.organization;
     const message = values.message.trim();
     if (message.length < 20 || message.length > 2000) next.message = c.errors.message;
@@ -76,7 +79,14 @@ export function Contact() {
       const payload = (await response.json().catch(() => null)) as { ok?: boolean } | null;
       if (response.ok && payload?.ok === true) {
         setStatus("success");
-        setValues({ name: "", email: "", organization: "", message: "", consent: false, website: "" });
+        setValues({
+          name: "",
+          email: "",
+          organization: "",
+          message: "",
+          consent: false,
+          website: "",
+        });
       } else {
         setStatus("error");
       }
@@ -258,7 +268,9 @@ export function Contact() {
 
               <div aria-live="polite" className="mt-6 min-h-6">
                 {status === "success" && (
-                  <p className="border-l border-brass pl-4 text-[15px] text-midnight">{c.success}</p>
+                  <p className="border-l border-brass pl-4 text-[15px] text-midnight">
+                    {c.success}
+                  </p>
                 )}
                 {status === "error" && (
                   <p className="border-l border-brass pl-4 text-[15px] text-midnight">{c.error}</p>

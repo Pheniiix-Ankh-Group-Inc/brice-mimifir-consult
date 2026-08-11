@@ -252,7 +252,7 @@ export const en: Content = {
       organization: "Organization",
       message: "What would you like to make clearer or move forward?",
       consent:
-        "I agree that Brice Mimifir Inc. may use this information to respond to my inquiry.",
+        "I agree that Group Pheniiix Ankh Inc. may use this information to respond to my inquiry.",
     },
     optional: "optional",
     submit: "Start a conversation",
@@ -276,13 +276,14 @@ export const en: Content = {
     connectLabel: "Connect",
     privacy: "Privacy",
     accessibility: "Accessibility",
-    copyright: (year: number) => `© ${year} Brice Mimifir Inc.`,
+    copyright: (year: number) =>
+      `© ${year} Group Pheniiix Ankh Inc. — Professional website of Brice Mimifir.`,
   },
   privacy: {
     title: "Privacy",
     updated: "Last updated: August 2026",
     paragraphs: [
-      "Brice Mimifir Inc. collects only the information you choose to provide through the contact form: your name, work email, organization if supplied, message and consent. This information is used only to review your inquiry, respond to you and maintain the related business correspondence.",
+      "Group Pheniiix Ankh Inc. collects only the information you choose to provide through the contact form: your name, work email, organization if supplied, message and consent. This information is used only to review your inquiry, respond to you and maintain the related business correspondence.",
       "The website does not use advertising or analytics cookies in this version. A local browser preference may be stored to remember your language selection.",
       "Contact form submissions are processed through infrastructure hosted by Vercel and delivered by Resend. Information may therefore be processed by these service providers solely to operate the website and transmit the message. The website does not sell personal information or use contact submissions for automatic marketing enrollment.",
       "Information is retained only for as long as reasonably necessary to respond to the inquiry, maintain appropriate business records and meet applicable legal obligations. Access is limited to those who need it for these purposes.",
@@ -294,7 +295,7 @@ export const en: Content = {
   accessibility: {
     title: "Accessibility",
     paragraphs: [
-      "Brice Mimifir Inc. wants this website to be usable by as many people as possible. The site is designed with WCAG 2.2 Level AA as its accessibility target, without claiming formal certification.",
+      "Group Pheniiix Ankh Inc. wants this website to be usable by as many people as possible. The site is designed with WCAG 2.2 Level AA as its accessibility target, without claiming formal certification.",
       "The implementation includes semantic headings and landmarks, keyboard navigation, visible focus states, a skip link, labeled form controls, accessible menu, tabs, accordions and carousels, sufficient color contrast, responsive text, meaningful alternative text and support for reduced-motion preferences.",
       "The website is tested at common mobile, tablet and desktop widths, with keyboard-only navigation and browser zoom up to 200 percent. Content and essential actions must not depend on color, hover or animation alone.",
       "If you encounter a barrier or need information in another format, email brice.mimifir.a@gmail.com and describe the page, feature or content concerned. A reasonable effort will be made to respond and provide an accessible alternative.",

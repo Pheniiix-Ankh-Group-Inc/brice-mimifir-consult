@@ -262,7 +262,7 @@ export const fr: Content = {
       organization: "Organisation",
       message: "Qu'aimeriez-vous clarifier ou faire avancer ?",
       consent:
-        "J'accepte que Brice Mimifir Inc. utilise ces renseignements pour répondre à ma demande.",
+        "J'accepte que Groupe Pheniiix Ankh Inc. utilise ces renseignements pour répondre à ma demande.",
     },
     optional: "facultatif",
     submit: "Commencer la conversation",
@@ -286,13 +286,14 @@ export const fr: Content = {
     connectLabel: "Contact",
     privacy: "Confidentialité",
     accessibility: "Accessibilité",
-    copyright: (year: number) => `© ${year} Brice Mimifir Inc.`,
+    copyright: (year: number) =>
+      `© ${year} Groupe Pheniiix Ankh Inc. — Site professionnel de Brice Mimifir.`,
   },
   privacy: {
     title: "Confidentialité",
     updated: "Dernière mise à jour : août 2026",
     paragraphs: [
-      "Brice Mimifir Inc. recueille uniquement les renseignements que vous choisissez de fournir dans le formulaire de contact : votre nom, votre courriel professionnel, votre organisation lorsque vous l'indiquez, votre message et votre consentement. Ces renseignements servent uniquement à examiner votre demande, à vous répondre et à conserver la correspondance d'affaires associée.",
+      "Groupe Pheniiix Ankh Inc. recueille uniquement les renseignements que vous choisissez de fournir dans le formulaire de contact : votre nom, votre courriel professionnel, votre organisation lorsque vous l'indiquez, votre message et votre consentement. Ces renseignements servent uniquement à examiner votre demande, à vous répondre et à conserver la correspondance d'affaires associée.",
       "Cette version du site n'utilise aucun cookie publicitaire ou analytique. Une préférence locale peut être enregistrée dans votre navigateur afin de mémoriser votre choix de langue.",
       "Les demandes du formulaire sont traitées par une infrastructure hébergée chez Vercel et transmises par Resend. Ces fournisseurs peuvent donc traiter les renseignements uniquement pour faire fonctionner le site et transmettre le message. Le site ne vend aucun renseignement personnel et n'inscrit pas automatiquement les personnes à des communications marketing.",
       "Les renseignements sont conservés uniquement pendant la durée raisonnablement nécessaire pour répondre à la demande, maintenir les dossiers d'affaires appropriés et respecter les obligations légales applicables. L'accès est limité aux personnes qui en ont besoin à ces fins.",
@@ -304,7 +305,7 @@ export const fr: Content = {
   accessibility: {
     title: "Accessibilité",
     paragraphs: [
-      "Brice Mimifir Inc. souhaite que ce site puisse être utilisé par le plus grand nombre de personnes possible. Le site est conçu en prenant les WCAG 2.2 niveau AA comme objectif d'accessibilité, sans revendiquer une certification formelle.",
+      "Groupe Pheniiix Ankh Inc. souhaite que ce site puisse être utilisé par le plus grand nombre de personnes possible. Le site est conçu en prenant les WCAG 2.2 niveau AA comme objectif d'accessibilité, sans revendiquer une certification formelle.",
       "L'implémentation comprend des titres et repères sémantiques, une navigation au clavier, des états de focus visibles, un lien d'évitement, des champs de formulaire étiquetés, un menu, des onglets, des accordéons et des carrousels accessibles, des contrastes suffisants, un texte adaptatif, des textes alternatifs pertinents et la prise en charge des préférences de réduction des animations.",
       "Le site est vérifié aux largeurs courantes des appareils mobiles, tablettes et ordinateurs, avec une navigation uniquement au clavier et un zoom du navigateur jusqu'à 200 %. Aucun contenu ni aucune action essentielle ne doit dépendre uniquement de la couleur, du survol ou d'une animation.",
       "Si vous rencontrez un obstacle ou avez besoin d'une information dans un autre format, écrivez à brice.mimifir.a@gmail.com en indiquant la page, la fonctionnalité ou le contenu concerné. Un effort raisonnable sera fait pour vous répondre et fournir une solution accessible.",

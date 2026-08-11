@@ -6,15 +6,15 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy | Brice Mimifir Inc." },
+      { title: "Privacy | Brice Mimifir" },
       {
         name: "description",
-        content: "How Brice Mimifir Inc. handles information submitted through this website.",
+        content: "How Group Pheniiix Ankh Inc. handles information submitted through this website.",
       },
-      { property: "og:title", content: "Privacy | Brice Mimifir Inc." },
+      { property: "og:title", content: "Privacy | Brice Mimifir" },
       {
         property: "og:description",
-        content: "How Brice Mimifir Inc. handles information submitted through this website.",
+        content: "How Group Pheniiix Ankh Inc. handles information submitted through this website.",
       },
       { property: "og:type", content: "article" },
     ],

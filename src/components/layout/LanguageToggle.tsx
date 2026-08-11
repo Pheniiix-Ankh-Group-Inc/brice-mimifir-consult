@@ -25,9 +25,7 @@ export function LanguageToggle({ tone = "dark" }: { tone?: "dark" | "light" }) {
             }`}
           >
             {option.label}
-            <span className="sr-only">
-              {option.value === "en" ? " English" : " Français"}
-            </span>
+            <span className="sr-only">{option.value === "en" ? " English" : " Français"}</span>
           </button>
         </span>
       ))}
