@@ -105,7 +105,10 @@ export function FullscreenMenu({
           <ul className="space-y-4 text-[15px] text-ivory/80">
             <li>{t.common.location}</li>
             <li>
-              <a className="border-b border-brass/50 hover:text-brass" href={`mailto:${SITE.email}`}>
+              <a
+                className="border-b border-brass/50 hover:text-brass"
+                href={`mailto:${SITE.email}`}
+              >
                 {SITE.email}
               </a>
             </li>

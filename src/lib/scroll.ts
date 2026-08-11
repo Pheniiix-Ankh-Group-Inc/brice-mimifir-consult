@@ -1,7 +1,6 @@
 export function prefersReducedMotion(): boolean {
   return (
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
   );
 }
 
@@ -19,9 +18,7 @@ export function scrollToSection(id: string, focusSelector?: string): boolean {
     block: "start",
   });
 
-  const focusTarget = focusSelector
-    ? target.querySelector<HTMLElement>(focusSelector)
-    : target;
+  const focusTarget = focusSelector ? target.querySelector<HTMLElement>(focusSelector) : target;
   if (focusTarget) {
     if (!focusTarget.hasAttribute("tabindex") && focusTarget === target) {
       focusTarget.setAttribute("tabindex", "-1");
