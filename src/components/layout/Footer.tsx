@@ -51,25 +51,29 @@ export function Footer() {
                 {SITE.email}
               </a>
             </li>
+          </ul>
+          <ul className="mt-4 flex items-center gap-2">
             <li>
               <a
-                className="border-b border-brass/50 hover:text-brass"
+                className="flex h-11 w-11 items-center justify-center text-ivory/80 transition-colors duration-200 hover:text-brass"
                 href={SITE.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t.common.linkedin}
               >
-                {t.common.linkedin}
+                <LinkedInIcon />
                 <span className="sr-only"> ({t.common.newTab})</span>
               </a>
             </li>
             <li>
               <a
-                className="border-b border-brass/50 hover:text-brass"
+                className="flex h-11 w-11 items-center justify-center text-ivory/80 transition-colors duration-200 hover:text-brass"
                 href={SITE.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t.common.instagram}
               >
-                {t.common.instagram}
+                <InstagramIcon />
                 <span className="sr-only"> ({t.common.newTab})</span>
               </a>
             </li>
