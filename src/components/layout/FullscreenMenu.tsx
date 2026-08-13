@@ -1,19 +1,28 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 
-import { useLanguage } from "@/i18n/LanguageProvider";
 import { SITE } from "@/content/site";
+import type { Content } from "@/content/types";
+import type { Locale } from "@/i18n/config";
+import { BrandLogo } from "./BrandLogo";
 import { LanguageToggle } from "./LanguageToggle";
+
+type MenuContent = Pick<Content, "brand" | "common" | "nav">;
 
 export function FullscreenMenu({
   open,
   onClose,
   onNavigate,
+  locale,
+  t,
 }: {
   open: boolean;
   onClose: () => void;
   onNavigate: (id: string) => void;
+  locale: Locale;
+  t: MenuContent;
 }) {
-  const { t } = useLanguage();
   const panelRef = useRef<HTMLDivElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
 
@@ -65,9 +74,7 @@ export function FullscreenMenu({
       className="fixed inset-0 z-50 overflow-y-auto bg-midnight text-ivory"
     >
       <div className="shell flex min-h-16 items-center justify-between py-6 md:py-8">
-        <span className="text-[13px] font-semibold tracking-[0.24em] uppercase">
-          {t.brand.name}
-        </span>
+        <BrandLogo alt={t.brand.name} className="h-14 w-14" />
         <button
           ref={closeRef}
           type="button"
@@ -136,7 +143,7 @@ export function FullscreenMenu({
             </li>
           </ul>
           <div className="mt-8">
-            <LanguageToggle tone="dark" />
+            <LanguageToggle locale={locale} label={t.common.language} tone="dark" />
           </div>
         </div>
       </div>

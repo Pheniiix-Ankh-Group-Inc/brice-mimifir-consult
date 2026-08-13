@@ -1,27 +1,39 @@
+"use client";
+
 import { useState } from "react";
 
 import { Carousel } from "@/components/Carousel";
 import { Reveal } from "@/components/Reveal";
-import { useLanguage } from "@/i18n/LanguageProvider";
+import type { Content } from "@/content/types";
 
-export function Thinking() {
-  const { t } = useLanguage();
-  const th = t.thinking;
+export function Thinking({
+  thinking,
+  common,
+}: {
+  thinking: Content["thinking"];
+  common: Content["common"];
+}) {
   const [openId, setOpenId] = useState<string | null>(null);
-  const openArticle = th.articles.find((article) => article.id === openId) ?? null;
+  const openArticle = thinking.articles.find((article) => article.id === openId) ?? null;
 
   return (
     <section id="thinking" className="section-y bg-ivory">
       <div className="shell">
         <Reveal>
-          <p className="eyebrow text-brass">{th.eyebrow}</p>
-          <h2 className="display-2 mt-7 text-midnight">{th.headline}</h2>
-          <p className="body-lg measure mt-8 text-slate">{th.intro}</p>
+          <p className="eyebrow text-brass">{thinking.eyebrow}</p>
+          <h2 className="display-2 mt-7 text-midnight">{thinking.headline}</h2>
+          {thinking.intro && <p className="body-lg measure mt-8 text-slate">{thinking.intro}</p>}
         </Reveal>
 
         <div className="mt-16">
-          <Carousel label={th.carouselLabel} count={th.articles.length}>
-            {th.articles.map((article, index) => {
+          <Carousel
+            label={thinking.carouselLabel}
+            count={thinking.articles.length}
+            previousLabel={common.previous}
+            nextLabel={common.next}
+            ofLabel={common.of}
+          >
+            {thinking.articles.map((article, index) => {
               const open = openId === article.id;
               return (
                 <article
@@ -32,7 +44,7 @@ export function Thinking() {
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="display-3 mt-5 text-midnight">{article.title}</h3>
-                  <p className="mt-5 flex-1 text-slate">{article.paragraphs[0]}</p>
+                  <p className="mt-5 flex-1 text-slate">{article.excerpt}</p>
                   <div className="mt-7">
                     <button
                       type="button"
@@ -41,7 +53,7 @@ export function Thinking() {
                       onClick={() => setOpenId(open ? null : article.id)}
                       className="link-editorial text-midnight"
                     >
-                      {open ? th.hide : th.read}
+                      {open ? thinking.hide : thinking.read}
                       <span aria-hidden="true">{open ? "↑" : "↓"}</span>
                     </button>
                   </div>

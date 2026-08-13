@@ -1,19 +1,29 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import type { ReactNode } from "react";
+"use client";
 
-import { useLanguage } from "@/i18n/LanguageProvider";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+
 import { prefersReducedMotion } from "@/lib/scroll";
 
 type CarouselProps = {
   label: string;
   count: number;
+  previousLabel: string;
+  nextLabel: string;
+  ofLabel: string;
   tone?: "dark" | "light";
   children: ReactNode;
 };
 
 /** Manual carousel: scroll-snap track, swipe, buttons and keyboard. No autoplay. */
-export function Carousel({ label, count, tone = "light", children }: CarouselProps) {
-  const { t } = useLanguage();
+export function Carousel({
+  label,
+  count,
+  previousLabel,
+  nextLabel,
+  ofLabel,
+  tone = "light",
+  children,
+}: CarouselProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
 
@@ -24,12 +34,12 @@ export function Carousel({ label, count, tone = "light", children }: CarouselPro
     if (items.length === 0) return;
     const left = track.scrollLeft;
     let closest = 0;
-    let min = Number.POSITIVE_INFINITY;
-    items.forEach((item, i) => {
+    let minimumDistance = Number.POSITIVE_INFINITY;
+    items.forEach((item, itemIndex) => {
       const distance = Math.abs(item.offsetLeft - track.offsetLeft - left);
-      if (distance < min) {
-        min = distance;
-        closest = i;
+      if (distance < minimumDistance) {
+        minimumDistance = distance;
+        closest = itemIndex;
       }
     });
     setIndex(closest);
@@ -46,13 +56,14 @@ export function Carousel({ label, count, tone = "light", children }: CarouselPro
     const track = trackRef.current;
     if (!track) return;
     const items = Array.from(track.children) as HTMLElement[];
-    const target = items[Math.max(0, Math.min(items.length - 1, next))];
+    const boundedIndex = Math.max(0, Math.min(items.length - 1, next));
+    const target = items[boundedIndex];
     if (!target) return;
     track.scrollTo({
       left: target.offsetLeft - track.offsetLeft,
       behavior: prefersReducedMotion() ? "auto" : "smooth",
     });
-    setIndex(Math.max(0, Math.min(items.length - 1, next)));
+    setIndex(boundedIndex);
   }, []);
 
   const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -90,7 +101,7 @@ export function Carousel({ label, count, tone = "light", children }: CarouselPro
           className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-200 disabled:opacity-40 ${buttonTone}`}
         >
           <span aria-hidden="true">←</span>
-          <span className="sr-only">{t.common.previous}</span>
+          <span className="sr-only">{previousLabel}</span>
         </button>
         <button
           type="button"
@@ -99,10 +110,10 @@ export function Carousel({ label, count, tone = "light", children }: CarouselPro
           className={`flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-200 disabled:opacity-40 ${buttonTone}`}
         >
           <span aria-hidden="true">→</span>
-          <span className="sr-only">{t.common.next}</span>
+          <span className="sr-only">{nextLabel}</span>
         </button>
         <p aria-live="polite" className="text-[13px] tracking-[0.16em]">
-          <span className="sr-only">{`${index + 1} ${t.common.of} ${count} — `}</span>
+          <span className="sr-only">{`${index + 1} ${ofLabel} ${count} — `}</span>
           {String(index + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
         </p>
       </div>
