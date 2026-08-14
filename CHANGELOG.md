@@ -23,6 +23,7 @@ Toutes les modifications notables de ce projet sont documentées dans ce fichier
 
 ### Changed
 
+- `SITE_URL` rendue optionnelle pour les déploiements Vercel temporaires, avec repli automatique sur les URL système de Vercel ; variables Resend documentées comme désactivables sans bloquer le build ;
 - modes d’intervention « Sous-traitance intégrée » et « Mandat au forfait », ainsi que leurs équivalents anglais, retirés pour présenter uniquement la consultation ;
 - contenu éditorial mis à jour vers la version 2.1 en français et en anglais : nouveau titre du Hero et fusion du parcours, des principes, de Future Caribbean et d'ANBACHAIN dans une seule section « À propos » ;
 - positionnement de Brice MIMIFIR comme « Consultant Java senior — Modernisation applicative & AWS », avec métadonnées SEO, Open Graph et données structurées localisées correspondantes ;

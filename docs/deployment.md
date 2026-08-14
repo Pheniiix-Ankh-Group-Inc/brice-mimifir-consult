@@ -31,14 +31,16 @@ Référence : [Managing Domains — Resend](https://resend.com/docs/dashboard/do
 
 Ajouter les variables dans **Project Settings → Environment Variables** :
 
-| Variable             | Preview                                                                        | Production                                 |
-| -------------------- | ------------------------------------------------------------------------------ | ------------------------------------------ |
-| `SITE_URL`           | laisser vide pour utiliser l'URL Vercel propre à la preview                    | URL canonique finale en HTTPS, sans chemin |
-| `RESEND_API_KEY`     | optionnelle ; utiliser une clé de test dédiée si le formulaire doit être testé | clé d'envoi secrète                        |
-| `CONTACT_TO_EMAIL`   | destinataire de test si Resend est activé                                      | destinataire réel                          |
-| `CONTACT_FROM_EMAIL` | expéditeur de test vérifié                                                     | expéditeur réel sur le domaine vérifié     |
+| Variable             | Preview                                                                        | Production                                                                   |
+| -------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| `SITE_URL`           | laisser vide pour utiliser l'URL Vercel propre à la preview                    | optionnelle pour les tests ; URL canonique finale avant l'ouverture publique |
+| `RESEND_API_KEY`     | optionnelle ; utiliser une clé de test dédiée si le formulaire doit être testé | clé d'envoi secrète                                                          |
+| `CONTACT_TO_EMAIL`   | destinataire de test si Resend est activé                                      | destinataire réel                                                            |
+| `CONTACT_FROM_EMAIL` | expéditeur de test vérifié                                                     | expéditeur réel sur le domaine vérifié                                       |
 
 Ne jamais préfixer les secrets par `NEXT_PUBLIC_`. Après une modification de variable, reconstruire le déploiement concerné.
+
+Sans `SITE_URL`, le build utilise automatiquement `VERCEL_PROJECT_PRODUCTION_URL` en production et `VERCEL_URL` en preview. Les trois variables Resend peuvent également rester absentes : le formulaire sera indisponible, mais cela ne bloque ni le build ni les autres pages.
 
 ## 5. Ajouter la règle WAF du formulaire
 
@@ -75,8 +77,8 @@ Avant fusion :
 ## 7. Passer en production
 
 1. Affecter le domaine personnalisé au projet et confirmer son HTTPS.
-2. Définir `SITE_URL` sur cette origine exacte pour l'environnement Production.
-3. Vérifier les quatre variables Production et la règle WAF publiée.
+2. Avant l'ouverture publique, définir `SITE_URL` sur cette origine exacte pour l'environnement Production.
+3. Lorsque le formulaire doit être activé, définir les trois variables Resend et publier la règle WAF.
 4. Fusionner la pull request dans `main` seulement après approbation.
 5. Sur le déploiement Production, contrôler `/robots.txt`, `/sitemap.xml`, les canonical et un envoi réel.
 6. Vérifier que `Strict-Transport-Security` est présent uniquement en production.
