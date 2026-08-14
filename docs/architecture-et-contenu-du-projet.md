@@ -641,7 +641,7 @@ Les données structurées décrivent :
 - `Organization` : Groupe Pheniiix Ankh Inc. ;
 - `ProfessionalService` : services Java, AWS, livraison continue et intégration.
 
-`SITE_URL` est obligatoire lors d’un build Vercel Production.
+`SITE_URL` est optionnelle pendant les déploiements de test. En son absence, l'origine SEO utilise `VERCEL_PROJECT_PRODUCTION_URL` en production ou `VERCEL_URL` en preview. Elle doit être définie avec le domaine canonique final avant l'ouverture publique.
 
 ## 11. Formulaire et sécurité
 
@@ -682,10 +682,13 @@ Protections :
 Variables :
 
 ```env
-SITE_URL=
-RESEND_API_KEY=
-CONTACT_TO_EMAIL=
-CONTACT_FROM_EMAIL=
+# Optionnelle pendant les tests Vercel
+# SITE_URL=
+
+# À définir ensemble lorsque le formulaire doit envoyer des courriels
+# RESEND_API_KEY=
+# CONTACT_TO_EMAIL=
+# CONTACT_FROM_EMAIL=
 ```
 
 ## 12. En-têtes de sécurité

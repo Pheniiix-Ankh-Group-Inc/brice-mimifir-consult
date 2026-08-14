@@ -28,14 +28,16 @@ Le site local est disponible sur `http://localhost:3000`. La racine redirige sel
 
 ## Variables d'environnement
 
-| Variable             | Requise    | Usage                                                         |
-| -------------------- | ---------- | ------------------------------------------------------------- |
-| `SITE_URL`           | production | origine canonique publique, par exemple `https://example.com` |
-| `RESEND_API_KEY`     | formulaire | clé serveur Resend, jamais préfixée par `NEXT_PUBLIC_`        |
-| `CONTACT_TO_EMAIL`   | formulaire | destinataire des demandes                                     |
-| `CONTACT_FROM_EMAIL` | formulaire | expéditeur utilisant un domaine vérifié dans Resend           |
+| Variable             | Requise          | Usage                                                         |
+| -------------------- | ---------------- | ------------------------------------------------------------- |
+| `SITE_URL`           | lancement public | origine canonique publique, par exemple `https://example.com` |
+| `RESEND_API_KEY`     | formulaire       | clé serveur Resend, jamais préfixée par `NEXT_PUBLIC_`        |
+| `CONTACT_TO_EMAIL`   | formulaire       | destinataire des demandes                                     |
+| `CONTACT_FROM_EMAIL` | formulaire       | expéditeur utilisant un domaine vérifié dans Resend           |
 
-En local, l'origine SEO retombe sur `http://localhost:3000`. En preview Vercel, laisser `SITE_URL` vide permet d'utiliser automatiquement `VERCEL_URL`. Un build Vercel Production échoue volontairement si `SITE_URL` est absent ou invalide.
+En local, l'origine SEO retombe sur `http://localhost:3000`. Sur Vercel, laisser `SITE_URL` vide utilise automatiquement `VERCEL_PROJECT_PRODUCTION_URL` en production et `VERCEL_URL` en preview. Cela permet un déploiement de test sans configuration manuelle. Définir `SITE_URL` avec le domaine canonique final avant l'ouverture publique.
+
+Les trois variables Resend peuvent rester absentes pendant les tests de déploiement. Dans ce cas, le site fonctionne normalement et le formulaire retourne son message localisé d'indisponibilité temporaire.
 
 ## Commandes
 
