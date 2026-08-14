@@ -1,13 +1,28 @@
-import { useCallback, useEffect, useState } from "react";
-import { Link, useNavigate } from "@tanstack/react-router";
+"use client";
 
-import { useLanguage } from "@/i18n/LanguageProvider";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
+
+import type { Content } from "@/content/types";
+import type { Locale } from "@/i18n/config";
 import { scrollToSection } from "@/lib/scroll";
+import { BrandLogo } from "./BrandLogo";
 import { FullscreenMenu } from "./FullscreenMenu";
 
-export function Header({ overlay = false }: { overlay?: boolean }) {
-  const { t } = useLanguage();
-  const navigate = useNavigate();
+type HeaderContent = Pick<Content, "brand" | "common" | "nav">;
+
+export function Header({
+  locale,
+  t,
+  overlay = false,
+}: {
+  locale: Locale;
+  t: HeaderContent;
+  overlay?: boolean;
+}) {
+  const pathname = usePathname();
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [compact, setCompact] = useState(!overlay);
   const [hidden, setHidden] = useState(false);
@@ -30,23 +45,24 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
   const goToSection = useCallback(
     (id: string) => {
       setMenuOpen(false);
-      if (!scrollToSection(id)) {
-        void navigate({ to: "/", hash: id });
-      }
+      if (pathname === `/${locale}` && scrollToSection(id)) return;
+      router.push(`/${locale}#${id}`);
     },
-    [navigate],
+    [locale, pathname, router],
   );
 
   const handleNavigate = useCallback(
     (id: string) => {
       goToSection(id);
-      // Focus returns to the trigger before the panel unmounts.
-      window.setTimeout(() => {
-        document.getElementById("menu-trigger")?.focus();
-      }, 0);
+      window.setTimeout(() => document.getElementById("menu-trigger")?.focus(), 0);
     },
     [goToSection],
   );
+
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+    document.getElementById("menu-trigger")?.focus();
+  }, []);
 
   return (
     <>
@@ -68,15 +84,12 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
             compact ? "h-16" : "h-[72px] lg:h-24"
           }`}
         >
-          <Link to="/" className="block text-ivory" aria-label={t.brand.name}>
-            <span className="block text-[13px] font-semibold tracking-[0.24em] uppercase lg:text-[15px]">
-              {t.brand.name}
-            </span>
-            {!compact && (
-              <span className="mt-1 block text-[11px] tracking-[0.14em] text-ivory/60 uppercase">
-                {t.brand.tagline}
-              </span>
-            )}
+          <Link href={`/${locale}`} className="block" aria-label={t.brand.name}>
+            <BrandLogo
+              alt=""
+              priority
+              className={compact ? "h-11 w-11" : "h-14 w-14 lg:h-16 lg:w-16"}
+            />
           </Link>
 
           <button
@@ -94,11 +107,10 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
 
       <FullscreenMenu
         open={menuOpen}
-        onClose={() => {
-          setMenuOpen(false);
-          document.getElementById("menu-trigger")?.focus();
-        }}
+        onClose={closeMenu}
         onNavigate={handleNavigate}
+        locale={locale}
+        t={t}
       />
     </>
   );

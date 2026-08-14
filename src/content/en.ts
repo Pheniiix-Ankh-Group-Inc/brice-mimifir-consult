@@ -1,14 +1,19 @@
+import { SITE } from "./site";
 import type { Content } from "./types";
 
 export const en: Content = {
   meta: {
-    title: "Technology Transformation Consultant in Montréal | Brice Mimifir",
+    title: "Brice MIMIFIR | Senior Java & AWS Consultant",
     description:
-      "I help organizations understand where technology is creating friction, decide what to address first, and support their teams through practical change.",
+      "Senior Java consultant in Montréal supporting IT teams with application modernization, AWS, Terraform and continuous delivery.",
+    openGraphTitle: "Brice MIMIFIR — Java Modernization, AWS & Continuous Delivery",
+    openGraphDescription:
+      "Java and AWS expertise embedded with your teams to modernize applications, improve delivery reliability and support change through production.",
   },
   brand: {
-    name: "Brice Mimifir",
-    tagline: "Business & Technology Transformation",
+    name: "Brice MIMIFIR",
+    title: "Senior Java Consultant — Application Modernization & AWS",
+    tagline: "Java Modernization, AWS & Continuous Delivery",
   },
   common: {
     menu: "Menu",
@@ -16,294 +21,511 @@ export const en: Content = {
     skipToContent: "Skip to content",
     language: "Language",
     location: "Montréal, Canada",
-    email: "brice.mimifir.a@gmail.com",
+    email: SITE.email,
     linkedin: "LinkedIn",
+    linkedinLabel: "Brice MIMIFIR’s LinkedIn profile",
     instagram: "Instagram",
+    instagramLabel: "Brice MIMIFIR’s Instagram profile",
+    anbachain: "ANBACHAIN",
     newTab: "opens in a new tab",
     previous: "Previous",
     next: "Next",
     of: "of",
   },
   nav: [
-    { id: "challenge", number: "01", label: "The Challenge", short: "The Challenge" },
-    { id: "experience", number: "02", label: "Experience", short: "Experience" },
-    { id: "how-i-help", number: "03", label: "How I Help", short: "How I Help" },
-    { id: "thinking", number: "04", label: "Thinking", short: "Thinking" },
-    { id: "contact", number: "05", label: "Contact", short: "Contact" },
+    { id: "challenge", number: "01", label: "Challenges", short: "Challenges" },
+    { id: "how-i-help", number: "02", label: "How I Contribute", short: "How I Contribute" },
+    { id: "experience", number: "03", label: "Experience", short: "Experience" },
+    { id: "thinking", number: "04", label: "Perspectives", short: "Perspectives" },
+    { id: "about", number: "05", label: "About", short: "About" },
+    { id: "contact", number: "06", label: "Contact", short: "Contact" },
   ],
   hero: {
-    eyebrow: "Business & Technology Transformation",
-    headlineLines: ["When technology", "slows the business,", "clarity comes", "first."],
-    body: "I help regulated and complex organizations identify what is blocking progress, decide what should change first, and lead transformation with clarity and control.",
-    cta: "Discuss your challenge",
+    eyebrow: "Brice MIMIFIR — Senior Java & AWS Consultant",
+    headlineLines: ["Evolving your systems,", "alongside your teams."],
+    body: "I work within IT teams to evolve existing Java applications, automate deployments and support change through production. My experience in banking has taught me to move with discipline while accounting for technical, operational and human constraints.",
+    primaryCta: "Plan a conversation",
+    secondaryCta: "Explore my approach",
+    supportingLine: "Advisory",
     location: "Montréal · Canada",
     scroll: "Scroll",
     imageAlt:
       "Temporary editorial photograph: daylight through tall windows in a quiet stone lobby.",
   },
   challenge: {
-    eyebrow: "The Challenge",
-    headlineLines: ["Progress can slow", "even when everyone", "is working hard."],
+    eyebrow: "At the heart of your technical challenges",
+    headlineLines: [
+      "Technical friction eventually affects",
+      "both teams and the value",
+      "they deliver.",
+    ],
     intro:
-      "Technology problems rarely stay inside technology. They appear in the way people coordinate, make decisions, manage risk and try to keep important work moving.",
+      "Modernization challenges rarely come from code alone. They also live in dependencies, delivery processes, production constraints and the knowledge teams have accumulated over time. Before proposing a solution, it is important to understand how those elements work together.",
+    findingLabel: "What is happening",
+    impactLabel: "The impact",
     slides: [
       {
         number: "01",
-        title: "Delivery continues. Progress still feels slow.",
-        body: "Initiatives move forward, but dependencies, approvals and urgent requests absorb much of the teams' time and energy.",
+        title: "Applications that are difficult to evolve",
+        finding:
+          "Core applications carry years of business rules, integrations and technical decisions. Every change can have consequences that are difficult to predict while technical debt continues to grow.",
+        impact:
+          "Teams spend more time protecting the existing environment, new capabilities take longer to deliver and maintenance becomes more expensive.",
       },
       {
         number: "02",
-        title: "Complexity has become part of everyday work.",
-        body: "People compensate for systems and processes that no longer fit by adding coordination, controls and manual effort.",
+        title: "Long and demanding production releases",
+        finding:
+          "Deployments still depend on manual steps, inconsistent environments and approvals distributed across several teams.",
+        impact:
+          "Production releases become stressful events, feedback arrives more slowly and a significant amount of energy goes into coordinating the process rather than improving the product.",
       },
       {
         number: "03",
-        title: "Business and technology are not working from the same picture.",
-        body: "Each group understands part of the problem, but priorities, constraints and risks are not shared clearly enough to support confident decisions.",
-      },
-      {
-        number: "04",
-        title: "Transformation creates activity, but not always meaningful change.",
-        body: "Projects, platforms and governance may change while the same underlying friction returns in another form.",
+        title: "Integrations that add complexity",
+        finding:
+          "Cloud migration, external services, new identity mechanisms and event-driven architectures must connect to systems that remain in operation.",
+        impact:
+          "Dependencies multiply, responsibilities become less clear and the operational burden on developers increases.",
       },
     ],
     conclusion:
-      "Before introducing another solution, understand what is really blocking the business.",
-    carouselLabel: "The Challenge, four observations",
-  },
-  experience: {
-    eyebrow: "Experience",
-    headline: "Transformation becomes possible when people share a clear view of the problem.",
-    paragraphs: [
-      "For more than seven years, I have worked within large enterprise environments where technology decisions affect operations, risk, and the people responsible for delivery.",
-      "I learned that progress rarely depends on introducing one more tool. It begins by understanding where friction lives, bringing business and technology around the same priorities, and turning difficult decisions into a path that teams can realistically execute.",
-      "Today, I combine hands-on engineering experience with a broader transformation perspective. I listen, clarify constraints, challenge assumptions, and help organizations move from uncertainty to controlled, practical change.",
-    ],
-    signature: [
-      "Brice Mimifir",
-      "Founder & Business Technology Transformation Advisor",
-      "Montréal, Canada",
-    ],
-    imageAlt:
-      "Temporary editorial photograph: an empty meeting room with natural light and brass detailing.",
-    caseStudy: {
-      eyebrow: "Selected Experience",
-      headline: "Creating a clearer path through a complex modernization.",
-      paragraphs: [
-        "A modernization initiative within a regulated enterprise involved 39 services and several delivery dependencies. The challenge was not simply technical: teams needed a clearer understanding of what could change, in what order, and with what operational risk.",
-        "Working from within the delivery environment, I contributed to clarifying dependencies, supporting API modernization, and making the release path more manageable for the teams involved.",
-        "Through their combined efforts, one delivery cycle moved from six weeks to two. The meaningful change was not speed alone. Teams gained a clearer path for sequencing work and moving forward with greater control.",
-      ],
-    },
-    technical: {
-      label: "View the technical context",
-      intro:
-        "These technologies are part of the delivery context. They are selected according to the organization's constraints—not treated as the solution by themselves.",
-      groups: [
-        {
-          title: "Application modernization",
-          items: ["Java", "Spring Boot", "REST APIs", "Event-driven integration", "Kafka"],
-        },
-        { title: "Cloud and platforms", items: ["AWS", "EKS", "Kubernetes", "Terraform"] },
-        { title: "Delivery and reliability", items: ["CI/CD", "Jenkins", "Splunk", "Datadog"] },
-        {
-          title: "Additional product experience",
-          items: ["React", "Next.js", "Exploratory blockchain solutions"],
-        },
-      ],
-    },
-    beyond: {
-      label: "Beyond client work",
-      body: "I also co-founded ANBACHAIN, a professional community exploring blockchain, education and emerging technology through connection, shared knowledge and events.",
-    },
+      "The goal is not to replace everything that exists. It is to determine what should evolve, in what order and with what acceptable level of risk.",
+    carouselLabel: "Three technical challenges",
   },
   howIHelp: {
-    eyebrow: "How I Help",
-    headline: "Clarity before transformation.",
+    eyebrow: "Integrated and collaborative support",
+    headline: "Evolve what exists without disrupting what still works.",
     intro:
-      "I don't start with a predetermined technology. I start with what the organization needs to achieve and what is getting in the way.",
-    tablistLabel: "How I help",
+      "I support teams that need to modernize Java applications, improve delivery reliability or integrate new services. I begin by understanding the environment, production constraints and existing responsibilities. The engagement is then shaped around the context rather than a predetermined technology.",
+    tablistLabel: "The three pillars of my contribution",
     steps: [
       {
-        id: "diagnose",
-        tab: "Diagnose",
-        headline: "Understand where progress is getting stuck.",
-        paragraphs: [
-          "This is useful when delivery feels slow, priorities keep changing, or teams are compensating for systems and processes that no longer support the way the organization needs to work.",
-          "Together, we listen to the people closest to the work, examine the path from decision to delivery, and identify the dependencies, constraints, and operational risks creating friction.",
-          "You leave with a shared understanding of the problem and a focused view of what deserves attention first.",
+        id: "modernization",
+        tab: "Application modernization",
+        number: "Pillar 01",
+        headline: "Evolve applications progressively.",
+        body: "I contribute to the modernization of Java components, APIs and interfaces while accounting for existing dependencies. Depending on the context, this can include a Java upgrade, a SOAP-to-REST transition, progressive service decomposition or the evolution of an aging interface.",
+        outcomeLabel: "What it supports",
+        outcome:
+          "A clearer modernization path, better-tested changes and an evolution that teams can absorb without unnecessary disruption.",
+      },
+      {
+        id: "delivery",
+        tab: "Delivery reliability",
+        number: "Pillar 02",
+        headline: "Make deployments more repeatable and easier to control.",
+        body: "I work with teams to automate infrastructure and pipelines, reduce differences between environments and make delivery steps more visible. AWS, Terraform, Jenkins, Docker and Kubernetes are used when they fit the organization’s actual constraints.",
+        outcomeLabel: "What it supports",
+        outcome:
+          "Less manual effort, more predictable releases and more time available for useful development work.",
+      },
+      {
+        id: "integrations",
+        tab: "Integrations and security",
+        number: "Pillar 03",
+        headline: "Connect new services without losing sight of operations.",
+        body: "I contribute to integrations involving external services, event flows, identity systems and cloud platforms. The objective is to clarify contracts, responsibilities, failure scenarios and monitoring needs before production.",
+        outcomeLabel: "What it supports",
+        outcome:
+          "More understandable integrations, more visible risks and an environment teams can operate and evolve.",
+      },
+    ],
+    engagementLabel: "Engagement models",
+    engagementModels: [
+      {
+        title: "Advisory",
+        body: "Focused support to analyze a situation, evaluate options or define a realistic modernization path.",
+      },
+    ],
+    note: "Every engagement begins with a conversation. Scope depends on the existing environment, level of risk, priorities and team capacity.",
+    cta: "Discuss your context",
+  },
+  experience: {
+    eyebrow: "Selected experience",
+    headline: "Concrete contributions, delivered with the teams involved.",
+    intro:
+      "The results below came from collective work. They provide context on my responsibilities, the environments in which I have worked and the ways I contributed to moving initiatives forward.",
+    tablistLabel: "Selected experience",
+    technicalLabel: "View the technical context",
+    technicalHideLabel: "Hide the technical context",
+    caseStudies: [
+      {
+        id: "national-bank",
+        tab: "National Bank of Canada",
+        eyebrow: "Experience 01",
+        headline: "National Bank of Canada",
+        meta: "Senior Java Developer · January 2021 to May 2025 · 4 years and 5 months",
+        contextLabel: "Context",
+        context:
+          "Within a highly regulated banking environment, I worked with development, architecture, security, infrastructure, operations and product teams on the modernization and operation of enterprise applications.",
+        sections: [
+          {
+            title: "Application modernization",
+            paragraphs: [
+              "I contributed to the migration of 39 SOAP services to REST APIs by developing Java and Spring services from contracts defined with a specialized team. I also participated in upgrading components from Java 8 to Java 21, supported by automated compatibility testing.",
+              "On an application used across more than 2,500 workstations, I owned the migration of three modules from AngularJS 1.7 to React 18.",
+            ],
+          },
+          {
+            title: "Delivery and AWS infrastructure",
+            paragraphs: [
+              "Working with architecture, infrastructure and delivery teams, I contributed to redesigning deployments during the move from IBM UrbanCode Deploy and WebSphere to AWS. Automation with Jenkins and Docker helped reduce one production delivery cycle from six weeks to two.",
+              "I designed and developed 13 reusable Terraform modules for Amazon S3, DynamoDB, Lambda, SQS, CloudWatch and EventBridge. I also participated in deploying, configuring, monitoring and troubleshooting containerized applications on Amazon EKS.",
+            ],
+          },
+          {
+            title: "Contact Center as a Service — Genesys Cloud CX",
+            paragraphs: [
+              "I participated in a transition from an on-premises Genesys platform to Genesys Cloud CX. In that context, I configured Amazon EventBridge and the Genesys connector required for integrations, then used Terraform resources to provision and configure Genesys Cloud capabilities in a repeatable way.",
+            ],
+          },
+          {
+            title: "Production, security and collaboration",
+            paragraphs: [
+              "I contributed to Kafka event flows related to transaction and fraud-signal processing, as well as an identity migration to Microsoft Entra ID. I also supported production, participated in post-incident analysis and implemented corrective actions using Splunk, Datadog and CloudWatch.",
+              "The work included code reviews, developer mentoring and coordination with architecture, security, platform, operations and product teams.",
+            ],
+          },
         ],
-        engagementLabel: "Possible engagement",
-        engagementName: "Business & Technology Friction Diagnostic",
-        cta: "Discuss your situation",
-        detail: {
-          paragraphs: [
-            "For organizations experiencing recurring delivery friction, unclear priorities, or problems that continue despite previous initiatives.",
-            "May include stakeholder conversations, review of current initiatives, mapping of dependencies and decision points, and a working session to distinguish symptoms from underlying causes.",
+        indicators: {
+          label: "Context and contribution indicators",
+          items: [
+            "39 services involved in the SOAP-to-REST migration.",
+            "Six weeks to two for one production delivery cycle, a collective result to which I contributed.",
+            "13 reusable Terraform modules for AWS.",
+            "Three modules modernized from AngularJS to React.",
+            "More than 2,500 workstations using the application involved.",
+            "Java 8 to Java 21 across several backend components.",
+            "Four years and five months within National Bank of Canada.",
           ],
-          receiveLabel: "You receive:",
-          receive:
-            "a concise written diagnosis, prioritized observations, and practical questions or next steps to support the next decision.",
+        },
+        conclusionLabel: "What this experience demonstrates",
+        conclusion:
+          "The ability to contribute across several layers of modernization — applications, APIs, infrastructure, integrations, identity and production — while working with the specialized teams required in a regulated environment.",
+        technical: {
+          intro:
+            "This technical context contains only the technologies associated with this experience and the responsibilities described above.",
+          groups: [
+            {
+              title: "Applications and interfaces",
+              items: [
+                "Java 8 through Java 21",
+                "Spring and Spring Boot",
+                "REST APIs and SOAP services",
+                "React 18 and AngularJS 1.7",
+              ],
+            },
+            {
+              title: "Cloud, infrastructure and delivery",
+              items: [
+                "AWS",
+                "Amazon EKS",
+                "Amazon S3",
+                "DynamoDB",
+                "AWS Lambda",
+                "Amazon SQS",
+                "Amazon EventBridge",
+                "Terraform and Infrastructure as Code",
+                "Docker and Kubernetes",
+                "Jenkins and CI/CD",
+              ],
+            },
+            {
+              title: "Integrations and identity",
+              items: [
+                "Apache Kafka",
+                "Genesys Cloud CX",
+                "Genesys connector and Amazon EventBridge",
+                "Microsoft Entra ID",
+              ],
+            },
+            {
+              title: "Quality and security",
+              items: [
+                "Unit, integration and end-to-end testing",
+                "SonarQube",
+                "Snyk and Snyk Code",
+                "Code reviews",
+                "Compatibility analysis during migrations",
+              ],
+            },
+            {
+              title: "Production and observability",
+              items: [
+                "Production support and diagnosis",
+                "Post-incident analysis",
+                "Splunk",
+                "Datadog",
+                "CloudWatch",
+                "BMC Remedy",
+                "ServiceNow",
+              ],
+            },
+          ],
         },
       },
       {
-        id: "decide",
-        tab: "Decide",
-        headline: "Choose what should change first—and what should wait.",
-        paragraphs: [
-          "This is useful when several initiatives compete for attention, business and technology teams see different priorities, or leadership needs to move forward without creating unnecessary disruption.",
-          "Together, we compare the available options against business needs, operational risk, existing commitments, team capacity, and technical dependencies.",
-          "You leave with a realistic sequence of decisions, a clear rationale for each priority, and a path that people can understand and support.",
+        id: "cgi-public-sector",
+        tab: "CGI, public sector",
+        eyebrow: "Experience 02",
+        headline: "CGI, public sector",
+        meta: "Java Developer — Consultant · June 2019 to January 2021 · 1 year and 8 months",
+        contextLabel: "Overall context",
+        context:
+          "Two public-sector engagements where translating business rules, connecting existing systems and maintaining service continuity were essential.",
+        sections: [
+          {
+            title: "Engagement A — montreal.ca, City of Montréal",
+            paragraphs: [
+              "Context — As part of the montreal.ca redesign, the City needed digital forms capable of supporting complex administrative rules while communicating with internal information systems.",
+              "Contribution — Embedded in the development team through CGI, I contributed to the Drupal 8 backend by designing and integrating forms for citizen services.",
+              "I developed custom forms with the Drupal Form API, including FormBase, business validation, AJAX interactions and multi-step journeys. I also built custom Webform Handlers in PHP and connected Drupal forms to the City’s internal systems through REST APIs.",
+              "Value contributed — This work helped translate administrative processes into structured digital journeys while maintaining integration with the applications and data already used by municipal services.",
+            ],
+          },
+          {
+            title: "Engagement B — British Columbia Ministry of Health",
+            paragraphs: [
+              "Context — The engagement involved developing and maintaining applications in a government environment where service continuity and system stability were essential.",
+              "Contribution — I developed and maintained components using Oracle Forms, Java, EJB, PrimeFaces and PL/SQL. I also handled production incident diagnosis and resolution, as well as build and deployment activities with Jenkins and Docker.",
+              "Value contributed — This experience strengthened my ability to work with existing systems, understand heterogeneous technical environments and address incidents while keeping operational continuity in view.",
+            ],
+          },
         ],
-        engagementLabel: "Possible engagement",
-        engagementName: "Transformation Roadmap",
-        cta: "Discuss your priorities",
-        detail: {
-          paragraphs: [
-            "For leaders who understand that change is needed but need a realistic order of action.",
-            "May include evaluation of options, prioritization workshops, dependency and risk analysis, sequencing, and clarification of the decisions required at each stage.",
+        conclusionLabel: "What these engagements demonstrate",
+        conclusion:
+          "The ability to turn complex business rules into digital functions, connect public applications to existing systems and work methodically where service stability matters as much as new delivery.",
+        technical: {
+          intro:
+            "This technical context distinguishes the environments used across the two public-sector engagements described above.",
+          groups: [
+            {
+              title: "City of Montréal",
+              items: [
+                "Drupal 8 and PHP",
+                "Drupal Form API and FormBase",
+                "Webform Handlers",
+                "AJAX and multistep forms",
+                "REST APIs",
+              ],
+            },
+            {
+              title: "British Columbia Ministry of Health",
+              items: ["Oracle Forms", "Java", "EJB", "PrimeFaces", "PL/SQL"],
+            },
+            {
+              title: "Delivery and operations",
+              items: [
+                "Jenkins and Docker",
+                "Build and deployment",
+                "Production incident diagnosis and resolution",
+              ],
+            },
           ],
-          receiveLabel: "You receive:",
-          receive:
-            "a practical roadmap explaining what should happen first, what can wait, why those choices matter, and where ownership or further validation is required.",
-        },
-      },
-      {
-        id: "transform",
-        tab: "Transform",
-        headline: "Turn agreed decisions into controlled, practical progress.",
-        paragraphs: [
-          "This is useful when the direction is clear, but execution involves several teams, operational constraints, or dependencies that make change difficult to coordinate.",
-          "Together, we clarify responsibilities, sequence the work, surface blockers early, and maintain a shared view of progress, risk, and the decisions still required.",
-          "The goal is not change for its own sake. It is to help teams move forward with enough clarity, visibility, and control to make the transformation sustainable.",
-        ],
-        engagementLabel: "Possible engagement",
-        engagementName: "Transformation Leadership",
-        cta: "Discuss your transformation",
-        detail: {
-          paragraphs: [
-            "For organizations that have chosen a direction and need experienced support to maintain alignment during execution.",
-            "May include coordination between business and technology teams, delivery guidance, management of blockers and dependencies, decision preparation, and adaptation of the roadmap as conditions change.",
-          ],
-          receiveLabel: "You receive:",
-          receive:
-            "clearer coordination, visible decisions and risks, and sustained support as the organization moves through the transformation.",
         },
       },
     ],
-    note: "Every engagement begins with a conversation. The scope is shaped around the organization's context, constraints, and existing teams.",
+    complementary: {
+      label: "Complementary experience",
+      hideLabel: "Hide complementary experience",
+      intro:
+        "These technologies represent complementary work, integrations in progress or prototyping.",
+      groups: [
+        {
+          title: "In progress or prototyping",
+          items: [
+            "GitHub Copilot",
+            "Claude Code",
+            "Python and Node.js",
+            "Artificial intelligence model and API integrations",
+            "Retrieval-augmented generation — RAG",
+            "KYC/KYB integrations with Sumsub",
+            "OAuth2 and OpenID Connect",
+            "Smart-contract prototyping with Solidity",
+            "Stellar, Ethereum and Hedera",
+            "Web3.js and Ethers.js",
+          ],
+        },
+      ],
+      note: "These items represent complementary work, integrations in progress or prototyping. They must not be presented as platforms already delivered to production and do not replace the primary positioning around Java modernization, AWS and delivery.",
+    },
   },
   thinking: {
-    eyebrow: "Thinking",
-    headline: "Notes on clarity, decisions and change.",
+    eyebrow: "Perspectives",
+    headline: "Lessons from the field, without universal answers.",
     intro:
-      "Three reflections drawn from working inside complex delivery environments, written to be read in full.",
-    read: "Read the reflection",
-    hide: "Close the reflection",
-    carouselLabel: "Thinking, three reflections",
+      "These notes share observations from modernization and production work. They are not a substitute for understanding each organization’s context.",
+    read: "Read the perspective",
+    hide: "Close the perspective",
+    carouselLabel: "Perspectives, three reflections",
     articles: [
       {
-        id: "delivery-active",
-        title: "When delivery is active but progress still feels slow",
+        id: "java-8-to-21",
+        title: "Moving from Java 8 to Java 21 without breaking production",
+        excerpt:
+          "A Java upgrade is more than a compiler change. It requires understanding dependencies, implicit behaviours and the team’s actual ability to observe what changes in production.",
         paragraphs: [
-          "A busy delivery environment can create the impression that an organization is moving quickly. Teams complete tickets, attend planning sessions, release changes and respond to urgent requests. Yet important outcomes may still take longer than expected.",
-          "The difference often lies between activity and flow. A piece of work can move rapidly inside one team and then wait for an approval, an environment, a dependency or a decision owned elsewhere. Each delay may appear reasonable on its own. Together, they create a system in which people work hard while progress remains difficult to see.",
-          "Adding pressure rarely resolves this kind of problem. It can increase parallel work, shorten conversations and make teams protect their own commitments. The organization becomes busier, but the path from an important decision to a useful result becomes less clear.",
-          "A better starting point is to follow the work across its full journey. Where does it wait? Which decisions repeatedly arrive late? What information is missing when teams need to move? Which handoffs create uncertainty or rework? These questions shift the conversation away from individual performance and toward the conditions in which people are trying to deliver.",
-          "Progress becomes easier to improve when the organization shares a picture of the whole path. The purpose is not to remove every control or dependency. It is to understand which ones protect the business, which ones have become habits, and which ones can be redesigned so that teams spend more energy on meaningful work.",
-          "A simple but useful discipline is to make waiting visible alongside completed work. It changes the question from “Who needs to move faster?” to “What is preventing the work from moving?” That shift creates a more constructive basis for improvement.",
+          "Moving from Java 8 to Java 21 may appear to be a mainly technical task: update the version, resolve compilation errors, run tests and deploy. In an enterprise application, the reality is usually broader. The Java version is connected to frameworks, libraries, servers, pipelines, monitoring tools and behaviours on which teams may have relied for years.",
+          "A useful first step is therefore to establish a clear picture of the existing environment. Which dependencies are still maintained? Which components share the same runtime? Which tests genuinely protect important functions? Which parts of the system are understood by only a few people? Without that visibility, a migration can be technically correct while simply moving risk into production.",
+          "Progressing component by component reduces uncertainty. It allows the team to update a manageable scope, observe incompatibilities, improve tests and evolve the pipeline before expanding the change. Unit tests remain necessary, but they are not enough. Integration tests, end-to-end scenarios and validation of external interactions become essential.",
+          "Monitoring matters as much as compilation. Logs, metrics and alerts should make it possible to compare behaviour before and after the upgrade. A team that can quickly detect a regression and understand its origin has a much safer change than a team that relies only on deployment success.",
+          "Finally, the migration should leave the environment easier to understand than before. Documenting decisions, removing unnecessary dependencies and sharing what was learned prevents the next evolution from depending again on a few individuals. The real outcome is not only running Java 21. It is making the application easier to maintain and evolve together.",
         ],
       },
       {
-        id: "legacy",
-        title: "Legacy is not only a technology problem",
+        id: "release-weeks",
+        title: "Why production releases take weeks",
+        excerpt:
+          "Delivery time rarely comes from a single pipeline. It accumulates through the dependencies, environments, approvals and decisions surrounding a production release.",
         paragraphs: [
-          "A legacy system is often described through its age, programming language or infrastructure. Those details matter, but they rarely explain why changing the system feels so difficult.",
-          "Over time, an important application becomes connected to much more than code. It carries business rules, exceptions, controls, reporting needs and knowledge that may live only with a few experienced people. Teams build manual steps around it. Operations learn how to recognize unusual situations. Customers and employees adapt their behaviour to what the system can and cannot do.",
-          "This means modernization is not simply the replacement of old technology with new technology. If the organization does not understand what people are compensating for, a new platform can reproduce the same friction behind a different interface. It may even remove safeguards that were never formally documented because everyone assumed they were part of the system.",
-          "Before choosing an architecture, it is useful to ask what the existing environment is protecting, where it creates risk, and which workarounds have become essential to daily operations. The people closest to the work often hold answers that are absent from diagrams and inventories.",
-          "A responsible modernization preserves what still has value, makes hidden knowledge visible and changes the environment in a sequence the organization can absorb. Sometimes that leads to replacement. Sometimes it leads to gradual simplification, better interfaces or clearer ownership. The objective is not to prove that the old system was wrong. It is to create a safer and more useful way forward.",
-          "This perspective also changes how success is measured. A modern platform is not enough if daily work becomes harder or if risk becomes less visible. Success also depends on the ability of people to operate, understand and evolve the new environment after the project team has moved on.",
+          "When a production release takes several weeks, the first reaction is often to look for a faster tool. Yet the time is not always spent inside the pipeline. It may be spent waiting for an environment, preparing configuration manually, obtaining approval from another team or discovering differences between environments too late.",
+          "To understand the issue, it helps to follow a change from the moment it is ready until the moment it is operating in production. Where does it wait? Which information must be entered again? Which step can only be performed by one person? Which checks genuinely protect the service and which exist because the environment is unreliable? Looking at the full journey prevents a systemic problem from being assigned to a single team.",
+          "Infrastructure as Code can reduce part of that friction. With Terraform, resources and dependencies become declarative, reviewable and repeatable. The same principles can be applied across environments while changes move through the review and control process already used for code. Terraform does not remove architecture decisions or security requirements. It makes their implementation more visible and consistent.",
+          "The pipeline can then automate repeatable steps: build, testing, quality analysis, artifact creation, deployment and verification. Necessary controls remain, but they are placed where they provide useful information. Automation that hides errors or can only be understood by its author simply moves the dependency elsewhere.",
+          "Sustainable improvement comes from combining automation, clear responsibilities and better visibility across delivery. The objective is not to deploy faster at any cost. It is to help teams release more regularly, with enough confidence to respond when something does not go as expected.",
         ],
       },
       {
-        id: "clarify-decision",
-        title: "Clarify the decision before choosing the solution",
+        id: "ai-workflows",
+        title: "Integrating AI into development workflows",
+        excerpt:
+          "AI can accelerate certain tasks, but its value depends on the context provided, the quality of verification and the rules the team applies to its use.",
         paragraphs: [
-          "Technology conversations often begin with a solution already in view: move to the cloud, automate a process, introduce artificial intelligence, adopt blockchain or replace a platform. The proposed technology may be valuable, but beginning there can make the organization solve the wrong problem with great efficiency.",
-          "A useful decision starts with a clearer description of the situation. What outcome is the organization trying to improve? Who experiences the current friction? What operational constraint cannot be ignored? Which risk must be reduced, and which risk is the organization prepared to accept? What would become possible if the problem were addressed?",
-          "These questions do not delay action. They create the conditions for action that can be explained and supported. They also reveal when several problems have been combined under one technology initiative. A platform replacement may contain questions about ownership, process, data quality, skills and governance. Treating them as one purchase makes trade-offs harder to see.",
-          "Once the decision is clear, technology options can be compared against the same needs and constraints. The organization can understand why one path is appropriate, why another can wait, and what must be learned before committing further.",
-          "Clarity does not remove uncertainty. Transformation always contains assumptions and new information. It does, however, make uncertainty visible and manageable. The goal is not to predict every detail at the beginning. It is to make the next decision with enough shared understanding that people can move forward, observe what changes and adjust without losing the original purpose.",
-          "A clear decision can also be communicated beyond the people who made it. Teams can connect their work to the intended outcome, raise a concern when reality changes and understand why an apparently attractive option was deliberately postponed. That shared rationale supports learning during execution.",
+          "Artificial intelligence assistants can generate code, propose tests, explain an existing codebase or accelerate documentation. These uses can be valuable, but they do not automatically transform how a team delivers software. Without context, the tool produces a plausible response. It may not know the business rules, security constraints or decisions that shaped the system.",
+          "The most realistic gains appear in well-bounded tasks: preparing a first test, summarizing a function, proposing a repetitive migration, comparing two approaches or finding information across authorized sources. The developer remains responsible for understanding the proposal, verifying its behaviour and deciding whether it fits the need.",
+          "Security should be defined before adoption at scale. What data can be shared? Which repositories can be used as context? How are secrets, personal information and intellectual property protected? A team should not rely on implicit rules when a tool may receive code or sensitive information.",
+          "Quality also remains a human and collective responsibility. Generated code should pass through the same tests, analysis and review as the rest of the product. A faster answer is only useful when it remains understandable, maintainable and compatible with the existing architecture.",
+          "AI becomes genuinely useful when it reduces mechanical work without reducing judgement. It can help teams spend more time understanding the problem, making architecture decisions and having the conversations required to deliver a reliable system. The useful question is therefore not only “how much code was generated?” but “what can the team now do better, with the same level of responsibility?”",
         ],
       },
     ],
   },
+  about: {
+    eyebrow: "About Brice",
+    headline: "Understand, build and share.",
+    biography: [
+      "My journey in technology began in 2014, close to users, through support, deployment and incident resolution. That first experience taught me that a system is never only about its code: behind every technical decision are people who work, collaborate and depend on it functioning properly.",
+      "Over time, I moved into development and consulting across public-sector, banking and regulated environments. Those experiences shaped the way I contribute: take the time to understand what already exists, listen to the people who know the environment and find a path forward that fits the organization’s reality.",
+      "I do not seek to impose a transformation larger than necessary. I prefer to contribute methodically, move forward with the teams and share knowledge so that improvements can continue after my engagement.",
+      "Curiosity, learning and knowledge sharing also hold an important place in my journey. I explore emerging technologies when they help clarify a problem, open new possibilities or support the creation of useful solutions. This interest also extends to initiatives connected to the Caribbean and the development of professional communities.",
+    ],
+    principlesLabel: "What guides the way I contribute",
+    principles: [
+      {
+        title: "Listen before proposing",
+        body: "Understand the context, constraints and work already completed before recommending a change.",
+      },
+      {
+        title: "Build with the teams",
+        body: "Bring my experience without replacing the knowledge and responsibilities already present in the organization.",
+      },
+      {
+        title: "Move forward progressively",
+        body: "Turn decisions into concrete steps that teams can test, observe and manage.",
+      },
+      {
+        title: "Share what was learned",
+        body: "Document decisions, pass on knowledge and avoid allowing the consultant’s involvement to create a new dependency.",
+      },
+    ],
+    initiatives: [
+      {
+        title: "Future Caribbean",
+        body: "I participate in the international Future Caribbean buildathon, focused on creating agentic artificial intelligence solutions for real challenges across the Caribbean. This experience allows me to learn from people with different backgrounds, experiment with new approaches and consider how technology can respond to local realities.",
+        cta: "Discover Future Caribbean",
+        href: SITE.futureCaribbean,
+      },
+      {
+        title: "ANBACHAIN",
+        body: "I am also a co-founder of ANBACHAIN, a professional community bringing people together around blockchain, Web3, artificial intelligence and knowledge sharing. Its purpose is to create useful connections, circulate resources and encourage collective learning before seeking to build a more complex structure.",
+        cta: "Discover ANBACHAIN",
+        href: SITE.anbachain,
+      },
+    ],
+    conclusion:
+      "Whether the context is a client engagement, an experiment or a community initiative, I try to contribute in the same way: understand the need, build with the people involved and leave something useful behind.",
+  },
   contact: {
-    eyebrow: "Get in Touch",
-    headline: "A useful conversation can begin before the solution is clear.",
-    body: "If something is slowing progress, creating uncertainty, or becoming harder to manage, you do not need to arrive with a finished brief. Tell me what you are seeing, and we can begin by clarifying the situation.",
+    eyebrow: "Get in touch",
+    headline: "Start with the context, not the solution.",
+    body: "You can contact me if an application is becoming difficult to evolve, if production releases require too much effort or if your team needs Java and AWS support to move an engagement forward. You do not need to arrive with a solution already defined: simply describe the situation, the constraints and what you want to improve.",
     formLabel: "Contact form",
     fields: {
-      name: "Name",
+      name: "Full name",
       email: "Work email",
-      organization: "Organization",
-      message: "What would you like to make clearer or move forward?",
+      organization: "Company or agency",
+      message: "Describe the context of your engagement, project or need.",
       consent:
-        "I agree that Group Pheniiix Ankh Inc. may use this information to respond to my inquiry.",
+        "I agree that Group Pheniiix Ankh Inc. may use this information only to review my inquiry and respond to me.",
     },
     optional: "optional",
-    submit: "Start a conversation",
+    submit: "Send the message",
     sending: "Sending…",
     note: "The first conversation is exploratory and carries no obligation.",
     success:
       "Thank you. Your message has been received. I will respond personally within two business days.",
     error:
-      "Your message could not be sent. Your text has been preserved. Please try again or email brice.mimifir.a@gmail.com.",
+      "Your message could not be sent. Your text has been preserved. Please try again or email contact@bricemimifir.com directly.",
+    rateLimited:
+      "Too many attempts were made from this connection. Your text has been preserved. Please wait ten minutes before trying again.",
+    unavailable:
+      "Secure message delivery is temporarily unavailable. Your text has been preserved. Please email contact@bricemimifir.com directly.",
     errors: {
-      name: "Please enter your name (2 to 80 characters).",
+      name: "Please enter your full name.",
       email: "Please enter a valid email address.",
-      organization: "Organization must be 120 characters or fewer.",
-      message: "Please describe your situation (20 to 2000 characters).",
+      organization: "The organization name must be 120 characters or fewer.",
+      messageTooShort: "Please describe your situation in at least 20 characters.",
+      messageTooLong: "The message must be 2,000 characters or fewer.",
       consent: "Please confirm your consent so I can respond to you.",
     },
+    directLabel: "Direct contact",
+    engagementModels: "Advisory",
   },
   footer: {
-    statement: "Helping organizations move from friction to clear, controlled change.",
+    statement:
+      "Helping IT teams modernize applications and delivery in a progressive, collaborative and controlled way.",
+    legalNote:
+      "Services presented under the Brice MIMIFIR brand are contracted, administered and invoiced by Group Pheniiix Ankh Inc., a Canadian corporation.",
     navLabel: "Footer navigation",
-    connectLabel: "Connect",
+    connectLabel: "Contact",
     privacy: "Privacy",
     accessibility: "Accessibility",
     copyright: (year: number) =>
-      `© ${year} Group Pheniiix Ankh Inc. — Professional website of Brice Mimifir.`,
+      `© ${year} Group Pheniiix Ankh Inc. — Professional website of Brice MIMIFIR.`,
   },
   privacy: {
     title: "Privacy",
     updated: "Last updated: August 2026",
     paragraphs: [
-      "Group Pheniiix Ankh Inc. collects only the information you choose to provide through the contact form: your name, work email, organization if supplied, message and consent. This information is used only to review your inquiry, respond to you and maintain the related business correspondence.",
-      "The website does not use advertising or analytics cookies in this version. A local browser preference may be stored to remember your language selection.",
-      "Contact form submissions are processed through infrastructure hosted by Vercel and delivered by Resend. Information may therefore be processed by these service providers solely to operate the website and transmit the message. The website does not sell personal information or use contact submissions for automatic marketing enrollment.",
-      "Information is retained only for as long as reasonably necessary to respond to the inquiry, maintain appropriate business records and meet applicable legal obligations. Access is limited to those who need it for these purposes.",
-      "You may request access to, correction of or deletion of the personal information associated with your inquiry, subject to applicable requirements. You may also withdraw consent for future use where applicable.",
-      "For a privacy question or request, contact Brice Mimifir at brice.mimifir.a@gmail.com.",
-      "This notice may be updated when the website, its service providers or its information practices change. A revised date will be displayed on this page.",
+      "Group Pheniiix Ankh Inc. collects only the information you choose to provide through the contact form: your name, work email, organization name when supplied, message and consent.",
+      "This information is used only to review your inquiry, respond to you and maintain related business correspondence. Submitting the form does not enroll you in a newsletter or automated marketing communication.",
+      "This version of the website does not use advertising or analytics cookies. A local browser preference may be stored to remember your language selection.",
+      "Contact form submissions are processed through infrastructure hosted by Vercel and delivered by Resend. These providers may process information only to the extent required to operate the website and transmit the message.",
+      "Information is retained only for as long as reasonably necessary to respond to the inquiry, maintain appropriate business records and meet applicable obligations. Access is limited to those who require it for these purposes.",
+      "You may request access to, correction of or deletion of personal information associated with your inquiry, subject to applicable requirements. You may also withdraw consent for future use where applicable.",
+      "For a privacy question or request, email contact@bricemimifir.com.",
+      "This notice may be updated when the website, its providers or its information practices change. A revised date will be displayed on this page.",
     ],
   },
   accessibility: {
     title: "Accessibility",
     paragraphs: [
-      "Group Pheniiix Ankh Inc. wants this website to be usable by as many people as possible. The site is designed with WCAG 2.2 Level AA as its accessibility target, without claiming formal certification.",
-      "The implementation includes semantic headings and landmarks, keyboard navigation, visible focus states, a skip link, labeled form controls, accessible menu, tabs, accordions and carousels, sufficient color contrast, responsive text, meaningful alternative text and support for reduced-motion preferences.",
-      "The website is tested at common mobile, tablet and desktop widths, with keyboard-only navigation and browser zoom up to 200 percent. Content and essential actions must not depend on color, hover or animation alone.",
-      "If you encounter a barrier or need information in another format, email brice.mimifir.a@gmail.com and describe the page, feature or content concerned. A reasonable effort will be made to respond and provide an accessible alternative.",
+      "Group Pheniiix Ankh Inc. wants this website to be usable by as many people as possible. The website is designed with WCAG 2.2 Level AA as its accessibility target, without claiming formal certification.",
+      "The implementation includes semantic headings and landmarks, keyboard navigation, visible focus states, a skip link, properly labeled form controls, accessible interactive controls, sufficient color contrast, responsive text, meaningful alternative text and support for reduced-motion preferences.",
+      "Content and essential actions do not depend on color, hover or animation alone. The site remains usable at common mobile, tablet and desktop widths and with browser zoom up to 200 percent.",
+      "If you encounter a barrier or need information in another format, email contact@bricemimifir.com and describe the page, feature or content concerned. A reasonable effort will be made to respond and provide an accessible alternative.",
     ],
   },
   notFound: {
     title: "This page could not be found.",
     body: "The address may have changed, or the page may no longer be available.",
     cta: "Return home",
+  },
+  generalError: {
+    title: "This page could not be loaded.",
+    body: "Something went wrong. You can try again or return home.",
+    retry: "Try again",
+    home: "Return home",
   },
 };

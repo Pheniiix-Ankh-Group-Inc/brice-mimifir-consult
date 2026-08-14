@@ -1,8 +1,9 @@
 @import "tailwindcss" source(none);
 @source "../src";
+@source "../app";
 
 /*
- * Brice Mimifir — Midnight & Brass editorial design system.
+ * Brice MIMIFIR — Midnight & Brass editorial design system.
  * All colour, type and rhythm decisions live here as tokens.
  */
 
@@ -21,8 +22,8 @@
   --color-background: #fbfaf7;
   --color-foreground: #182635;
 
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 
   --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 }
